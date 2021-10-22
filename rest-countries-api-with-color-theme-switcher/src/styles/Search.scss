@@ -1,0 +1,30 @@
+@import "./variables.scss";
+.search__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search {
+  display: flex;
+  background-color: $DarkModeTextAndLightModeElements;
+  padding: 7px 23px;
+  width: 17rem;
+  gap: 0.3rem;
+  color: $LightModeInputColor;
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.16);
+  border-radius: 5px;
+
+  align-items: center;
+  & > input {
+    height: 80%;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-family: "Nunito Sans", sans-serif;
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+}
