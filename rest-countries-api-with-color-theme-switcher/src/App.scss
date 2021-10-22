@@ -11,6 +11,7 @@ body {
 .container {
   background-color: $LightModeBackgroundLight;
   height: 100vh;
+  color: $LightModeTextColor;
   .display__countries {
     padding: 2.5rem 3.4rem;
   }

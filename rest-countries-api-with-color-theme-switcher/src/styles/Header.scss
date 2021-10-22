@@ -5,8 +5,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0.125rem 0.063rem 0.688rem -0.5rem rgba(0, 0, 0, 0.44);
-  background-color: $DarkModeTextAndLightModeElements;
+  box-shadow: $boxShadow;
+  background-color: $White;
   h3 {
     margin-left: 2rem;
   }
