@@ -28,3 +28,18 @@
     }
   }
 }
+select.mySelect {
+  background: $DarkModeTextAndLightModeElements;
+  padding: 10px;
+  font-family: "Nunito Sans", sans-serif;
+  color: $LightModeInputColor;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.16);
+}
+select.mySelect option {
+  color: $LightModeInputColor;
+  padding: 0 10px;
+  font-weight: 600;
+}

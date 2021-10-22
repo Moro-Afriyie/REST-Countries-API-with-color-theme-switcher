@@ -16,7 +16,15 @@ const Search: React.FunctionComponent<ISearchProps> = (props) => {
         />
       </div>
       <div className="filter">
-        <input placeholder="" type="text" />
+        {/* <select onChange={selectCountry}> */}
+        <select className="mySelect">
+          <option>Filter by region</option>
+          <option value="Africa">Africa</option>
+          <option value="America">America</option>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="Oceania">Oceania</option>
+        </select>
       </div>
     </div>
   );
