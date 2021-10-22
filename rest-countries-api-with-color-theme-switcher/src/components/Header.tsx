@@ -4,7 +4,16 @@ import "../styles/Header.scss";
 interface IHeaderProps {}
 
 const Header: React.FunctionComponent<IHeaderProps> = (props) => {
-  return <h1>Header</h1>;
+  return (
+    <div className="header">
+      <h3>Where in the world?</h3>
+      <div className="theme-switcher">
+        <i className="far fa-moon"></i>
+        {/* <i className="fas fa-moon"></i> */}
+        <p>Dark Mode</p>
+      </div>
+    </div>
+  );
 };
 
 export default Header;
