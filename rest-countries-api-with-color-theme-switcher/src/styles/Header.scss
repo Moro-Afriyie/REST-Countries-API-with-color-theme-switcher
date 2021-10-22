@@ -6,17 +6,19 @@
   align-items: center;
   justify-content: space-between;
   box-shadow: 2px 1px 11px -8px rgba(0, 0, 0, 0.44);
+  background-color: $DarkModeTextAndLightModeElements;
   h3 {
     margin-left: 2rem;
   }
   .theme-switcher {
     display: flex;
+    cursor: pointer;
     gap: 0.3rem;
+    margin-right: 3rem;
     p {
       letter-spacing: 0.02rem;
       font-size: 12px;
       font-weight: 600;
-      margin-right: 2rem;
     }
     i {
       font-size: 15px;
