@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 2px 1px 11px -8px rgba(0, 0, 0, 0.44);
+  box-shadow: 0.125rem 0.063rem 0.688rem -0.5rem rgba(0, 0, 0, 0.44);
   background-color: $DarkModeTextAndLightModeElements;
   h3 {
     margin-left: 2rem;
@@ -17,11 +17,11 @@
     margin-right: 3.5rem;
     p {
       letter-spacing: 0.02rem;
-      font-size: 14px;
+      font-size: 0.875rem;
       font-weight: 600;
     }
     i {
-      font-size: 20px;
+      font-size: 1.25rem;
     }
   }
 }
