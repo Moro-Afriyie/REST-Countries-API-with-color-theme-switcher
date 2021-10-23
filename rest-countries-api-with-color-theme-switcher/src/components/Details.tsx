@@ -6,7 +6,10 @@ interface IDetailsProps {}
 const Details: React.FunctionComponent<IDetailsProps> = (props) => {
   return (
     <div className="details">
-      <div className="btn__back"></div>
+      <div className="btn__back">
+        <i className="fas fa-arrow-left"></i>
+        <p>Back</p>
+      </div>
       <div className="details__container"></div>
     </div>
   );

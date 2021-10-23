@@ -1,6 +1,22 @@
+@import "./variables.scss";
+
 .details {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  border: 1px solid;
+  .btn__back {
+    background-color: var(--element);
+    color: var(--textColor);
+    box-shadow: $boxShadow;
+    display: flex;
+    gap: 0.5rem;
+    width: 6rem;
+    padding: 0.2rem 0.4rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 0.4rem 0.4rem;
+  }
 }
