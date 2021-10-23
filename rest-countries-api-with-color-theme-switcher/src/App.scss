@@ -20,3 +20,8 @@ body {
     padding: 2.5rem 4rem;
   }
 }
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 13px;
+  }
+}
