@@ -13,3 +13,20 @@ $Desktop: 1440px;
 // Body copy
 $HomePageItems: 14px;
 $DetailPage: 16px;
+.dark {
+  --backgroundColor: hsl(207, 26%, 17%);
+  --textColor: hsl(0, 0%, 100%);
+  --element: hsl(209, 23%, 22%);
+  --inputText: hsl(0, 0%, 100%);
+  --spanColor: hsl(0, 6%, 87%);
+}
+.light {
+  --backgroundColor: hsl(0, 0%, 98%);
+  --textColor: hsl(200, 15%, 8%);
+  --element: hsl(0, 0%, 100%);
+  --inputText: hsl(0, 0%, 52%);
+  --spanColor: hsl(0, 0%, 19%);
+}
+
+// background-color: element;
+// color: textColor;

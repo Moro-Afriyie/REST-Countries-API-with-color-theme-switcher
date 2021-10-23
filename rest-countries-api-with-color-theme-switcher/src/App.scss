@@ -8,11 +8,12 @@ body {
   font-family: "Nunito Sans", sans-serif;
   min-height: 100vh;
 }
+
 .container {
-  background-color: $LightModeBackgroundLight;
-  height: 100vh;
-  color: $LightModeTextColor;
+  background-color: var(--backgroundColor);
+  // height: 100vh;
+  color: var(--textColor);
   .display__countries {
-    padding: 2.5rem 3.4rem;
+    padding: 2.5rem 4rem;
   }
 }

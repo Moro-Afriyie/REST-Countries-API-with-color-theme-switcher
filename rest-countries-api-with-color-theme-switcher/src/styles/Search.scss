@@ -6,12 +6,12 @@
 
 .search {
   display: flex;
-  background-color: $White;
+  background-color: var(--element);
   padding: 0.44rem 1.44rem;
-  width: 17rem;
-  gap: 0.3rem;
-  color: $LightModeInputColor;
-  // box-shadow: 0px 0.063rem 0.19rem 0.063rem rgba(0, 0, 0, 0.16);
+  max-width: 17rem;
+  width: 100%;
+  gap: 0.7rem;
+  color: var(--inputText);
   box-shadow: $boxShadow;
   border-radius: 0.2rem;
 
@@ -23,17 +23,24 @@
     outline: none;
     padding: 0.32rem;
     font-family: "Nunito Sans", sans-serif;
+    background-color: var(--element);
+    color: var(--inputText);
     &:focus {
       border: none;
       outline: none;
     }
+    &::placeholder {
+      color: var(--inputText);
+      opacity: 1;
+    }
   }
 }
+
 select.mySelect {
-  background: $White;
+  background: var(--element);
   padding: 0.63rem;
   font-family: "Nunito Sans", sans-serif;
-  color: $LightModeInputColor;
+  color: var(--textColor);
   font-weight: 600;
   outline: none;
   border: none;
@@ -43,7 +50,7 @@ select.mySelect {
   border-radius: 0.2rem;
 }
 select.mySelect option {
-  color: $LightModeInputColor;
+  color: var(--textColor);
   padding: 0 0.63rem;
   font-weight: 600;
 }

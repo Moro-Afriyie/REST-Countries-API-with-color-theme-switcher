@@ -10,7 +10,11 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
   return (
     <div className="home">
       <Search />
-      <CountryCard />
+      <div className="home__cards__container">
+        {[1, 2, 3, 4, 5, 6, 7, 8].map((country) => {
+          return <CountryCard key={country} />;
+        })}
+      </div>
     </div>
   );
 };

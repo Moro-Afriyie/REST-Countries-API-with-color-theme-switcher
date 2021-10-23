@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: space-between;
   box-shadow: $boxShadow;
-  background-color: $White;
+  background-color: var(--element);
   h3 {
     margin-left: 2rem;
   }
