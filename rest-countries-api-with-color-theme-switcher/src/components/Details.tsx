@@ -19,34 +19,42 @@ const Details: React.FunctionComponent<IDetailsProps> = (props) => {
         </div>
         <div className="country__details">
           <h2 className="country__name">Germany</h2>
-          <div className="country__info__left">
-            <p>
-              Population: <span>88,770,900</span>
-            </p>
-            <p>
-              Region: <span>Europe</span>
-            </p>
-            <p>
-              Capital: <span>Berlin</span>
-            </p>
-          </div>
-          <div className="country__info__right">
-            <p>
-              Population: <span>88,770,900</span>
-            </p>
-            <p>
-              Region: <span>Europe</span>
-            </p>
-            <p>
-              Capital: <span>Berlin</span>
-            </p>
+          <div className="country__info">
+            <div className="country__info__left">
+              <p>
+                Native Name: <span>88,770,900</span>
+              </p>
+              <p>
+                Population: <span>88,770,900</span>
+              </p>
+              <p>
+                Region: <span>Europe</span>
+              </p>
+              <p>
+                Sub Region: <span>Berlin</span>
+              </p>
+              <p>
+                Capital: <span>Berlin</span>
+              </p>
+            </div>
+            <div className="country__info__right">
+              <p>
+                Top Level Domain: <span>88,770,900</span>
+              </p>
+              <p>
+                Currencies: <span>Europe</span>
+              </p>
+              <p>
+                Languages: <span>Berlin</span>
+              </p>
+            </div>
           </div>
           <div className="country__info__bottom">
             <p>Border Countries:</p>
             <div className="border__countries">
-              <div className="contry">France</div>
-              <div className="contry">Germany</div>
-              <div className="contry">Netherlands</div>
+              <div className="country">France</div>
+              <div className="country">Germany</div>
+              <div className="country">Netherlands</div>
             </div>
           </div>
         </div>
