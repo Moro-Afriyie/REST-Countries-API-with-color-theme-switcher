@@ -6,7 +6,7 @@ import Home from "./components/Home";
 
 function App() {
   return (
-    <div className="container light">
+    <div className="container dark">
       <Header />
       <div className="display__countries">
         {/* <Home /> */}
