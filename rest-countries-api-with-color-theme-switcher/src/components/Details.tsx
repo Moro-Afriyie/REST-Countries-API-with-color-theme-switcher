@@ -4,7 +4,12 @@ import "../styles/Details.scss";
 interface IDetailsProps {}
 
 const Details: React.FunctionComponent<IDetailsProps> = (props) => {
-  return <h1>Details</h1>;
+  return (
+    <div className="details">
+      <div className="btn__back"></div>
+      <div className="details__container"></div>
+    </div>
+  );
 };
 
 export default Details;

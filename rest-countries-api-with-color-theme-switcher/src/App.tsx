@@ -9,8 +9,8 @@ function App() {
     <div className="container light">
       <Header />
       <div className="display__countries">
-        <Home />
-        {/* <Details /> */}
+        {/* <Home /> */}
+        <Details />
       </div>
     </div>
   );
