@@ -4,14 +4,17 @@
   margin: 0;
   padding: 0;
 }
+html,
+body {
+  min-height: 100%;
+}
 body {
   font-family: "Nunito Sans", sans-serif;
-  min-height: 100vh;
 }
 
 .container {
   background-color: var(--backgroundColor);
-  // height: 100vh;
+  min-height: 100vh;
   color: var(--textColor);
   .display__countries {
     padding: 2.5rem 4rem;
