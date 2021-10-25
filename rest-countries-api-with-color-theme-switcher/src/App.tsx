@@ -4,6 +4,8 @@ import Details from "./components/Details";
 import Header from "./components/Header";
 import Home from "./components/Home";
 
+const url="https://restcountries.com/v2/all";
+
 function App() {
   return (
     <div className="container light">
