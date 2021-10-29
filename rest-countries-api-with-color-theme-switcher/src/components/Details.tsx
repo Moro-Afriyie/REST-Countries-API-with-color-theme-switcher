@@ -1,15 +1,18 @@
 import * as React from "react";
 import "../styles/Details.scss";
+import { Link } from "react-router-dom";
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface IDetailsProps {}
 
 const Details: React.FunctionComponent<IDetailsProps> = (props) => {
   return (
     <div className="details">
-      <div className="btn__back">
-        <i className="fas fa-arrow-left"></i>
-        <p>Back</p>
-      </div>
+      <Link to="/">
+        <div className="btn__back">
+          <i className="fas fa-arrow-left"></i>
+          <p>Back</p>
+        </div>
+      </Link>
       <div className="details__container">
         <div className="country__flag">
           <img
