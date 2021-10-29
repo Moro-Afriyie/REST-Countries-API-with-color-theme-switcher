@@ -1,4 +1,8 @@
 @import "./variables.scss";
+a {
+  text-decoration: none;
+  color: var(--textColor);
+}
 .card-container {
   cursor: pointer;
   display: flex;
