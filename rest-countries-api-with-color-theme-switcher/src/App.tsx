@@ -3,7 +3,7 @@ import "./App.scss";
 import Details from "./components/Details";
 import Header from "./components/Header";
 import Home from "./components/Home";
-
+import { Route, Switch } from "react-router-dom";
 const url = "https://restcountries.com/v2/all";
 
 function App() {
