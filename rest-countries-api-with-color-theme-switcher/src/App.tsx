@@ -11,8 +11,14 @@ function App() {
     <div className="container light">
       <Header />
       <div className="display__countries">
-        <Home />
-        {/* <Details /> */}
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/:country">
+            <Details />
+          </Route>
+        </Switch>
       </div>
     </div>
   );
