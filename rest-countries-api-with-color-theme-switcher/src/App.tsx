@@ -4,27 +4,30 @@ import Details from "./components/Details";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import { Route, Switch } from "react-router-dom";
-import { Provider } from "react-redux";
-import { store } from "./redux/store/store";
+import { Provider, useSelector } from "react-redux";
+
 const url = "https://restcountries.com/v2/all";
+interface theme {
+  toggleTheme: boolean;
+}
 
 function App() {
+  const toggle = useSelector<theme>((state) => state.toggleTheme);
+
   return (
-    <Provider store={store}>
-      <div className="container light">
-        <Header />
-        <div className="display__countries">
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/:country">
-              <Details />
-            </Route>
-          </Switch>
-        </div>
+    <div className={`container ${toggle ? "dark" : "light"}`}>
+      <Header />
+      <div className="display__countries">
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/:country">
+            <Details />
+          </Route>
+        </Switch>
       </div>
-    </Provider>
+    </div>
   );
 }
 
