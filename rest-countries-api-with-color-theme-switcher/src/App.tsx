@@ -8,7 +8,7 @@ const url = "https://restcountries.com/v2/all";
 
 function App() {
   return (
-    <div className="container dark">
+    <div className="container light">
       <Header />
       <div className="display__countries">
         <Switch>
