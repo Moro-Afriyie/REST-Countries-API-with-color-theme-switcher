@@ -18,7 +18,9 @@ const Search: React.FunctionComponent<ISearchProps> = (props) => {
       <div className="filter">
         {/* <select onChange={selectCountry}> */}
         <select className="mySelect">
-          <option value="default">Filter by region</option>
+          <option value="default" disabled>
+            Filter by region
+          </option>
           <option value="Africa">Africa</option>
           <option value="America">America</option>
           <option value="Asia">Asia</option>
