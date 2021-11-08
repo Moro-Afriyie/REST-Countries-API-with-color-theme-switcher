@@ -1,13 +1,13 @@
-import { TOGGLE_THEME } from "../types/restTypes";
+import { TOGGLE_THEME } from "./../types/restTypes";
 
 interface Action {
-  type: string;
-  payload: string;
+  type: typeof TOGGLE_THEME;
+  payload: boolean;
 }
 
 const initialState = { toggleTheme: false };
 
-const toggleThemeReducer = (state = initialState, action: Action) => {
+export const toggleThemeReducer = (state = initialState, action: Action) => {
   switch (action.type) {
     case TOGGLE_THEME:
       return {
@@ -18,5 +18,3 @@ const toggleThemeReducer = (state = initialState, action: Action) => {
       return state;
   }
 };
-
-export default toggleThemeReducer;
