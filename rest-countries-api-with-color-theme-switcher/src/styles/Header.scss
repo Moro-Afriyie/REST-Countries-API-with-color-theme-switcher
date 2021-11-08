@@ -9,12 +9,18 @@
   background-color: var(--element);
   h3 {
     margin-left: 2rem;
+    @media screen and (max-width: $Mobile) {
+      margin-left: 1rem;
+    }
   }
   .theme-switcher {
     display: flex;
     cursor: pointer;
     gap: 0.3rem;
     margin-right: 3.5rem;
+    @media screen and (max-width: $Mobile) {
+      margin-right: 1rem;
+    }
     p {
       letter-spacing: 0.02rem;
       font-size: 0.875rem;
