@@ -18,3 +18,5 @@ const toggleThemeReducer = (state = initialState, action: Action) => {
       return state;
   }
 };
+
+export default toggleThemeReducer;
