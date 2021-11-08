@@ -1,22 +1,22 @@
 import * as React from "react";
 import "../styles/Header.scss";
-import { useSelector } from "react-redux";
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface IHeaderProps {}
-interface theme {
-  toggleTheme: boolean;
-}
+import { useDispatch, useSelector } from "react-redux";
+import { toggleTheme } from "../redux/actions/restActions";
+import { Theme } from "../interfaces/interface";
 
-const Header: React.FunctionComponent<IHeaderProps> = (props) => {
-  const toggle = useSelector<theme>((state) => state.toggleTheme);
-  console.log(toggle);
+const Header: React.FunctionComponent = () => {
+  const toggle = useSelector<Theme>((state) => state.toggleTheme);
+  const dispatch = useDispatch();
 
   return (
     <div className="header">
       <h3>Where in the world?</h3>
-      <div className="theme-switcher">
-        <i className="far fa-moon"></i>
-        {/* <i className="fas fa-moon"></i> */}
+      <div className="theme-switcher" onClick={() => dispatch(toggleTheme())}>
+        {toggle ? (
+          <i className="fas fa-moon"></i>
+        ) : (
+          <i className="far fa-moon"></i>
+        )}
         <p>Dark Mode</p>
       </div>
     </div>
