@@ -1,7 +1,7 @@
 import * as React from "react";
 import "../styles/Header.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleTheme } from "../redux/actions/restActions";
+import { toggleTheme } from "../redux/actions/toggleThemeActions";
 import { Theme } from "../interfaces/interface";
 
 const Header: React.FunctionComponent = () => {
