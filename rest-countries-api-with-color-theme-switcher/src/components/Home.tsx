@@ -17,6 +17,10 @@ interface countryInterface {
 const Home: React.FunctionComponent<IHomeProps> = (props) => {
   // const data = useSelector<IRootState>((state) = > state.countriesReducer.countries)
   const dispatch = useDispatch();
+  const countries = useSelector<IRootState>(
+    (state) => state.countriesReducer.countries
+  );
+  console.log(countries);
 
   React.useEffect(() => {
     // fetch("https://restcountries.com/v2/all")
@@ -30,10 +34,12 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
     //   console.log(data);
     // };
     // fetchData();
-    console.log(dispatch(fetchCountriesData()));
+    dispatch(fetchCountriesData());
   }, []);
 
   // console.log(data)
+
+  //{loading ? "Loading..." : error ? error.message : users.map(u => <h3>{u.name}</h3>)}
 
   return (
     <div className="home">
