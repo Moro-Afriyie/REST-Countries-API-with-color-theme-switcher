@@ -33,37 +33,10 @@ export const fetchCountriesData = () => {
     try {
       dispatch(fetchCountriesBegin());
       const response: any = await axios.get("https://restcountries.com/v2/all");
-      //   const countries: any[] = await response.json();
-      //   console.log("countries: ", countries);
       dispatch(fetchCountriesSuccess(response.data));
-      //   return countries;
       console.log(response);
     } catch (error) {
       dispatch(fetchCountriesError(error));
     }
   };
 };
-
-// export function fetchCountriesData() {
-//   return (dispatch: Dispatch) => {
-//     dispatch(fetchCountriesBegin());
-//     // return (
-//     fetch(url)
-//       .then((res) => res.json())
-//       .then((data) => {
-//         dispatch(fetchCountriesSuccess(data));
-//         //   return data;
-//       })
-//       //   .then(handleErrors)
-//       .catch((error) => dispatch(fetchCountriesError(error)));
-//     // );
-//   };
-// }
-
-// Handle HTTP errors since fetch won't.
-function handleErrors(response: { ok: any; statusText: string | undefined }) {
-  if (!response.ok) {
-    throw Error(response.statusText);
-  }
-  return response;
-}
