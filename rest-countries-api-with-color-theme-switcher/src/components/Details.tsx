@@ -30,7 +30,10 @@ const Details: React.FunctionComponent = () => {
   }, [params.country]);
 
   const getBorders = (country: countriesInterface) => {
-    const op = country.borders.map((e, i) => {
+    if (country.borders === undefined) {
+      return [];
+    }
+    const op = country.borders.map((e) => {
       const border = countryCode.find((element) => {
         if (element.alpha2Code === e || element.alpha3Code === e) {
           return element;
@@ -38,7 +41,6 @@ const Details: React.FunctionComponent = () => {
       });
       return border;
     });
-    console.log(op);
     return op;
   };
 
@@ -104,9 +106,6 @@ const Details: React.FunctionComponent = () => {
                     </div>
                   );
                 })}
-
-                <div className="country">Germany</div>
-                <div className="country">Netherlands</div>
               </div>
             </div>
           </div>

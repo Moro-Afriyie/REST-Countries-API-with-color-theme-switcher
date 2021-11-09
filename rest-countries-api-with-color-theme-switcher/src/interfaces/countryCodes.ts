@@ -728,7 +728,7 @@ export const countryCode = [
     numeric: 360,
   },
   {
-    englishShortName: "Iran (Islamic Republic of)",
+    englishShortName: "Iran",
     frenchShortName: "Iran (République Islamique d')",
     alpha2Code: "IR",
     alpha3Code: "IRN",
