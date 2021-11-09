@@ -18,7 +18,7 @@ const CountryCard: React.FunctionComponent<ICountryCardProps> = ({
   flag,
 }: ICountryCardProps) => {
   return (
-    <Link to="/country">
+    <Link to={`/${name}`}>
       <div className="card-container">
         <div className="card__image">
           <img src={flag.png} alt="country flag" />
@@ -26,7 +26,7 @@ const CountryCard: React.FunctionComponent<ICountryCardProps> = ({
         <div className="card__info">
           <h5>{name}</h5>
           <p>
-            Population: <span>{population}</span>
+            Population: <span>{population.toLocaleString()}</span>
           </p>
           <p>
             Region: <span>{region}</span>

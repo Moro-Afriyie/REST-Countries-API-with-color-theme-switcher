@@ -40,3 +40,17 @@ export const fetchCountriesData = () => {
     }
   };
 };
+
+export const getCountryData = (country: string) => {
+  return async (dispatch: Dispatch) => {
+    try {
+      dispatch(fetchCountriesBegin());
+      const response = await axios.get(
+        `https://restcountries.com/v2/${country}`
+      );
+      dispatch(fetchCountriesSuccess(response.data));
+    } catch (error) {
+      dispatch(fetchCountriesError(error));
+    }
+  };
+};

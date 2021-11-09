@@ -16,6 +16,7 @@ export interface countriesInterface {
     name: string;
     nativeName: string;
   }[];
+  nativeName: string;
   borders: string[];
   flags: { png: string };
 }
