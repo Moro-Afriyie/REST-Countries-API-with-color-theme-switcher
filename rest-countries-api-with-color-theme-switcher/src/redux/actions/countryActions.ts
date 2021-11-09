@@ -32,7 +32,7 @@ export const fetchCountriesData = () => {
   return async (dispatch: Dispatch) => {
     try {
       dispatch(fetchCountriesBegin());
-      const response: any = await axios.get("https://restcountries.com/v2/all");
+      const response = await axios.get(url);
       dispatch(fetchCountriesSuccess(response.data));
       console.log(response);
     } catch (error) {

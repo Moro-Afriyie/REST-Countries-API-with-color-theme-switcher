@@ -10,7 +10,7 @@ import { IRootState } from "./redux/reducers/rootReducer";
 
 function App() {
   const toggle = useSelector<IRootState>(
-    (state) => state.toggleThemeReducer.toggleTheme
+    (state) => state.toggleTheme.toggleTheme
   );
 
   return (

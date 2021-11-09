@@ -18,26 +18,13 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
   // const data = useSelector<IRootState>((state) = > state.countriesReducer.countries)
   const dispatch = useDispatch();
   const countries = useSelector<IRootState>(
-    (state) => state.countriesReducer.countries
+    (state) => state.countries.countries
   );
   console.log(countries);
 
   React.useEffect(() => {
-    // fetch("https://restcountries.com/v2/all")
-    //   .then((res) => res.json())
-    //   .then((json) => {
-    //     console.log(json);
-    //   })
-    //   .catch((error) => console.log(error));
-    // const fetchData = async () => {
-    //   const data = await dispatch(fetchCountriesData());
-    //   console.log(data);
-    // };
-    // fetchData();
     dispatch(fetchCountriesData());
   }, []);
-
-  // console.log(data)
 
   //{loading ? "Loading..." : error ? error.message : users.map(u => <h3>{u.name}</h3>)}
 
