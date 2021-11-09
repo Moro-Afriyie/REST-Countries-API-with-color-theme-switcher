@@ -1,18 +1,16 @@
 import * as React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { countriesInterface } from "../interfaces/interface";
 import { fetchCountriesData } from "../redux/actions/countryActions";
 import { IRootState } from "../redux/reducers/rootReducer";
 import "../styles/Home.scss";
 import CountryCard from "./CountryCard";
 import Search from "./Search";
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface IHomeProps {}
-
-const Home: React.FunctionComponent<IHomeProps> = (props) => {
+const Home: React.FunctionComponent = () => {
   const dispatch = useDispatch();
-  const countries = useSelector<IRootState>(
-    (state) => state.countries.countries
+  const countries = useSelector(
+    (state: IRootState) => state.countries.countries
   );
   console.log(countries);
 
@@ -26,8 +24,17 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
     <div className="home">
       <Search />
       <div className="home__cards__container">
-        {[1, 2, 3, 4, 5, 6, 7, 8].map((country) => {
-          return <CountryCard key={country} />;
+        {countries.map((country: countriesInterface) => {
+          return (
+            <CountryCard
+              name={country.name}
+              key={country.name}
+              population={country.population}
+              region={country.region}
+              capital={country.capital}
+              flag={country.flags}
+            />
+          );
         })}
       </div>
     </div>
