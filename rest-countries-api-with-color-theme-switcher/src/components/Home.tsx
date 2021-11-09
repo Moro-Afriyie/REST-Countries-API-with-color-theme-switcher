@@ -25,11 +25,12 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
     //     console.log(json);
     //   })
     //   .catch((error) => console.log(error));
-    const fetchData = async () => {
-      const data = await dispatch(fetchCountriesData());
-      console.log(data);
-    };
-    fetchData();
+    // const fetchData = async () => {
+    //   const data = await dispatch(fetchCountriesData());
+    //   console.log(data);
+    // };
+    // fetchData();
+    console.log(dispatch(fetchCountriesData()));
   }, []);
 
   // console.log(data)

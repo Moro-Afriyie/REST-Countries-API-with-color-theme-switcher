@@ -47,16 +47,16 @@ export const fetchCountriesError = (error: any) => {
 export function fetchCountriesData() {
   return (dispatch: Dispatch) => {
     dispatch(fetchCountriesBegin());
-    return (
-      fetch(url)
-        .then((res) => res.json())
-        .then((data) => {
-          dispatch(fetchCountriesSuccess(data));
-          return data;
-        })
-        //   .then(handleErrors)
-        .catch((error) => dispatch(fetchCountriesError(error)))
-    );
+    // return (
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        dispatch(fetchCountriesSuccess(data));
+        //   return data;
+      })
+      //   .then(handleErrors)
+      .catch((error) => dispatch(fetchCountriesError(error)));
+    // );
   };
 }
 
