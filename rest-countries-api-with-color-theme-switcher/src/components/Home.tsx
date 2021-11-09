@@ -12,7 +12,6 @@ const Home: React.FunctionComponent = () => {
   const countries = useSelector(
     (state: IRootState) => state.countries.countries
   );
-  console.log(countries);
 
   React.useEffect(() => {
     dispatch(fetchCountriesData());

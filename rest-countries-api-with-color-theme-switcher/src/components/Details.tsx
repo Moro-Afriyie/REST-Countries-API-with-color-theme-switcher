@@ -5,8 +5,8 @@ import { Link, useParams } from "react-router-dom";
 // import { IRootState } from "../redux/reducers/rootReducer";
 // import { getCountryData } from "../redux/actions/countryDetailsActions";
 import { countriesInterface } from "../interfaces/interface";
+import { countryCode } from "../interfaces/countryCodes";
 import axios from "axios";
-import { countriesReducer } from "../redux/reducers/countryReducer";
 
 const Details: React.FunctionComponent = () => {
   const params = useParams<{ country: string }>();
@@ -28,6 +28,19 @@ const Details: React.FunctionComponent = () => {
     };
     fectchCountry();
   }, [params.country]);
+
+  const getBorders = (country: countriesInterface) => {
+    const op = country.borders.map((e, i) => {
+      const border = countryCode.find((element) => {
+        if (element.alpha2Code === e || element.alpha3Code === e) {
+          return element;
+        }
+      });
+      return border;
+    });
+    console.log(op);
+    return op;
+  };
 
   return (
     <div className="details">
@@ -84,7 +97,14 @@ const Details: React.FunctionComponent = () => {
             <div className="country__info__bottom">
               <p>Border Countries:</p>
               <div className="border__countries">
-                <div className="country">France</div>
+                {getBorders(country[0]).map((border) => {
+                  return (
+                    <div className="country" key={border?.englishShortName}>
+                      {border?.englishShortName}
+                    </div>
+                  );
+                })}
+
                 <div className="country">Germany</div>
                 <div className="country">Netherlands</div>
               </div>
