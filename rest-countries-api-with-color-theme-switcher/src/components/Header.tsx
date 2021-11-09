@@ -2,10 +2,12 @@ import * as React from "react";
 import "../styles/Header.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleTheme } from "../redux/actions/toggleThemeActions";
-import { Theme } from "../interfaces/interface";
+import { IRootState } from "../redux/reducers/rootReducer";
 
 const Header: React.FunctionComponent = () => {
-  const toggle = useSelector<Theme>((state) => state.toggleTheme);
+  const toggle = useSelector<IRootState>(
+    (state) => state.toggleTheme.toggleTheme
+  );
   const dispatch = useDispatch();
 
   return (

@@ -20,7 +20,7 @@ export interface countriesInterface {
   flags: { png: string };
 }
 
-interface countryInterface {
+export interface countryInterface {
   countries: countriesInterface[];
   loading: boolean;
   error: string | null;

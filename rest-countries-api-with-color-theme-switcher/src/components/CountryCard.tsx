@@ -1,9 +1,7 @@
 import * as React from "react";
 import "../styles/CountryCard.scss";
 import { Link } from "react-router-dom";
-import { countriesInterface } from "../interfaces/interface";
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface ICountryCardProps {
   name: string;
   population: number;
