@@ -5,7 +5,6 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import { Route, Switch } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { Theme } from "./interfaces/interface";
 import { IRootState } from "./redux/reducers/rootReducer";
 
 function App() {

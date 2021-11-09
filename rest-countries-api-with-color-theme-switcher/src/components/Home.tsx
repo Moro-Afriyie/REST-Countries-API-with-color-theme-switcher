@@ -15,7 +15,6 @@ interface countryInterface {
 }
 
 const Home: React.FunctionComponent<IHomeProps> = (props) => {
-  // const data = useSelector<IRootState>((state) = > state.countriesReducer.countries)
   const dispatch = useDispatch();
   const countries = useSelector<IRootState>(
     (state) => state.countries.countries

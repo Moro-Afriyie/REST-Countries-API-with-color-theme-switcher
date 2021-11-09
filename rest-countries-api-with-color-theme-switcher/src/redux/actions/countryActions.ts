@@ -34,7 +34,6 @@ export const fetchCountriesData = () => {
       dispatch(fetchCountriesBegin());
       const response = await axios.get(url);
       dispatch(fetchCountriesSuccess(response.data));
-      console.log(response);
     } catch (error) {
       dispatch(fetchCountriesError(error));
     }
