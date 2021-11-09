@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { fetchCountriesData } from "../redux/actions/countryActions";
 import { IRootState } from "../redux/reducers/rootReducer";
 import "../styles/Home.scss";
@@ -16,14 +16,20 @@ interface countryInterface {
 
 const Home: React.FunctionComponent<IHomeProps> = (props) => {
   // const data = useSelector<IRootState>((state) = > state.countriesReducer.countries)
+  const dispatch = useDispatch();
 
   React.useEffect(() => {
-    fetch("https://restcountries.com/v2/all")
-      .then((res) => res.json())
-      .then((json) => {
-        console.log(json);
-      })
-      .catch((error) => console.log(error));
+    // fetch("https://restcountries.com/v2/all")
+    //   .then((res) => res.json())
+    //   .then((json) => {
+    //     console.log(json);
+    //   })
+    //   .catch((error) => console.log(error));
+    const fetchData = async () => {
+      const data = await dispatch(fetchCountriesData());
+      console.log(data);
+    };
+    fetchData();
   }, []);
 
   // console.log(data)

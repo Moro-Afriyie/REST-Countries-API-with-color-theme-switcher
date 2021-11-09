@@ -1,4 +1,6 @@
 import axios from "axios";
+import { Dispatch } from "redux";
+
 import {
   FETCH_COUNTRIES_SUCCESS,
   FETCH_COUNTRIES_ERROR,
@@ -12,7 +14,7 @@ export const fetchCountriesBegin = () => {
   };
 };
 
-export const fetchCountriesSuccess = (data: any) => {
+export const fetchCountriesSuccess = (data: any[]) => {
   return {
     type: FETCH_COUNTRIES_SUCCESS,
     payload: data,
@@ -27,12 +29,15 @@ export const fetchCountriesError = (error: any) => {
 };
 
 // export const fetchCountriesData = () => {
-//   return async (dispatch: (arg0: { type: string }) => void) => {
-//     dispatch(fetchCountriesBegin());
+//   async (dispatch: Dispatch) => {
 //     try {
-//       const countries = await axios.get(url);
-//       console.log(countries);
+//       dispatch(fetchCountriesBegin());
+//       const response: any = await axios.get("https://restcountries.com/v2/all");
+//       const countries: any[] = await response.json();
+//       //   console.log("countries: ", countries);
 //       dispatch(fetchCountriesSuccess(countries));
+//       //   return countries;
+//       console.log(response);
 //     } catch (error) {
 //       dispatch(fetchCountriesError(error));
 //     }
@@ -40,18 +45,18 @@ export const fetchCountriesError = (error: any) => {
 // };
 
 export function fetchCountriesData() {
-  return (
-    dispatch: (arg0: { type: string; payload?: any; error?: any }) => void
-  ) => {
+  return (dispatch: Dispatch) => {
     dispatch(fetchCountriesBegin());
-    return fetch(url)
-      .then(handleErrors)
-      .then((res) => console.log(res))
-      .then((data) => {
-        dispatch(fetchCountriesSuccess(data));
-        return data;
-      })
-      .catch((error) => dispatch(fetchCountriesError(error)));
+    return (
+      fetch(url)
+        .then((res) => res.json())
+        .then((data) => {
+          dispatch(fetchCountriesSuccess(data));
+          return data;
+        })
+        //   .then(handleErrors)
+        .catch((error) => dispatch(fetchCountriesError(error)))
+    );
   };
 }
 

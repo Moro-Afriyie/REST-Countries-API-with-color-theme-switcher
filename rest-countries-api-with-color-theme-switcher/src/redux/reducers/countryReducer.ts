@@ -36,14 +36,14 @@ export const countriesReducer = (
       return {
         ...state,
         loading: false,
-        countries: action.payload.data,
+        countries: action.payload,
       };
 
     case FETCH_COUNTRIES_ERROR:
       return {
         ...state,
         loading: false,
-        error: action.payload.error,
+        error: action.payload,
         countries: [],
       };
 
