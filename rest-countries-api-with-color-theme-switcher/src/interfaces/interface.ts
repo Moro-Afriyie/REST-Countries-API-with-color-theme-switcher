@@ -2,7 +2,7 @@ export interface Theme {
   toggleTheme: boolean;
 }
 
-export interface countries {
+export interface countriesInterface {
   name: string;
   topLevelDomain: string[];
   population: number;
