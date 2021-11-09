@@ -3,6 +3,7 @@ import {
   SET_COUNTRY_BEGIN,
   SET_COUNTRY_FAILURE,
   SET_COUNTRY_SUCCESS,
+  SET_COUNTRY_EMPTY,
 } from "../types/getCountryTypes";
 
 // type Actions = { type: typeof SET_COUNTRY; payload: countriesInterface[] };
@@ -35,6 +36,7 @@ interface countryInterface {
   loading: boolean;
   error: string | null;
 }
+
 const initialState = {
   country: [],
   loading: false,
@@ -44,7 +46,8 @@ const initialState = {
 type Action =
   | { type: typeof SET_COUNTRY_BEGIN }
   | { type: typeof SET_COUNTRY_SUCCESS; payload: countriesInterface[] }
-  | { type: typeof SET_COUNTRY_FAILURE; payload: string };
+  | { type: typeof SET_COUNTRY_FAILURE; payload: string }
+  | { type: typeof SET_COUNTRY_EMPTY };
 
 export const setCountryReducer = (
   state: countryInterface = initialState,
@@ -73,6 +76,13 @@ export const setCountryReducer = (
         country: [],
       };
 
+    case SET_COUNTRY_EMPTY:
+      return {
+        ...state,
+        loading: true,
+        country: [],
+        error: null,
+      };
     default:
       return state;
   }
