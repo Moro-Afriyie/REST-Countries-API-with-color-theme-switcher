@@ -1,15 +1,13 @@
 import * as React from "react";
 import "../styles/Details.scss";
 import { Link, useParams } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { IRootState } from "../redux/reducers/rootReducer";
-import { getCountryData } from "../redux/actions/countryDetailsActions";
+// import { useDispatch, useSelector } from "react-redux";
+// import { IRootState } from "../redux/reducers/rootReducer";
+// import { getCountryData } from "../redux/actions/countryDetailsActions";
 import { countriesInterface } from "../interfaces/interface";
 import axios from "axios";
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface IDetailsProps {}
 
-const Details: React.FunctionComponent<IDetailsProps> = (props) => {
+const Details: React.FunctionComponent = () => {
   const params = useParams<{ country: string }>();
   // const dispatch = useDispatch();
   // const country = useSelector((state: IRootState) => state.setCountry.country);
@@ -17,23 +15,19 @@ const Details: React.FunctionComponent<IDetailsProps> = (props) => {
   const [country, setCountry] = React.useState<countriesInterface[]>([]);
 
   React.useEffect(() => {
-    // dispatch(getCountryData(params.country.toLowerCase()));
     const fectchCountry = async () => {
       try {
         const response = await axios.get(
           `https://restcountries.com/v2/name/${params.country.toLowerCase()}`
         );
-        console.log(response.data);
         setCountry(response.data);
       } catch (error) {
-        //   dispatch(getCountryFailure(error));
         console.log(error);
       }
     };
     fectchCountry();
   }, [params.country]);
 
-  // console.log("loading: ", loading);
   const currency = (country: countriesInterface) => {
     if (country.currencies === undefined) {
       return "no currency specified";

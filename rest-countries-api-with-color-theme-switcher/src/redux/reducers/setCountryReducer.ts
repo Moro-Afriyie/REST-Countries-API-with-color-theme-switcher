@@ -6,31 +6,6 @@ import {
   SET_COUNTRY_EMPTY,
 } from "../types/getCountryTypes";
 
-// type Actions = { type: typeof SET_COUNTRY; payload: countriesInterface[] };
-
-// interface setCountryInterface {
-//   country: countriesInterface[];
-// }
-
-// const initialState = {
-//   country: [],
-// };
-
-// export const setCountryReducer = (
-//   state: setCountryInterface = initialState,
-//   action: Actions
-// ): setCountryInterface => {
-//   switch (action.type) {
-//     case SET_COUNTRY:
-//       return {
-//         ...state,
-//         country: action.payload,
-//       };
-//     default:
-//       return state;
-//   }
-// };
-
 interface countryInterface {
   country: countriesInterface[];
   loading: boolean;
