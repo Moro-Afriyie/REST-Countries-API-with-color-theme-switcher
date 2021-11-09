@@ -1,4 +1,5 @@
-import { createStore } from "redux";
-import { toggleThemeReducer } from "../reducers/toggleThemeReducer";
+import { createStore, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
+import { rootReducer } from "../reducers/rootReducer";
 
-export const store = createStore(toggleThemeReducer);
+export const store = createStore(rootReducer, applyMiddleware(thunk));

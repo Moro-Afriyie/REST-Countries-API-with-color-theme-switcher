@@ -6,11 +6,12 @@ import Home from "./components/Home";
 import { Route, Switch } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Theme } from "./interfaces/interface";
-
-const url = "https://restcountries.com/v2/all";
+import { IRootState } from "./redux/reducers/rootReducer";
 
 function App() {
-  const toggle = useSelector<Theme>((state) => state.toggleTheme);
+  const toggle = useSelector<IRootState>(
+    (state) => state.toggleThemeReducer.toggleTheme
+  );
 
   return (
     <div className={`container ${toggle ? "dark" : "light"}`}>

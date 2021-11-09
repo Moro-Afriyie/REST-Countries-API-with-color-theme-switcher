@@ -1,12 +1,33 @@
 import * as React from "react";
+import { useSelector } from "react-redux";
+import { fetchCountriesData } from "../redux/actions/countryActions";
+import { IRootState } from "../redux/reducers/rootReducer";
 import "../styles/Home.scss";
 import CountryCard from "./CountryCard";
 import Search from "./Search";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface IHomeProps {}
+interface countryInterface {
+  countries: any[];
+  loading: boolean;
+  error: string | null;
+}
 
 const Home: React.FunctionComponent<IHomeProps> = (props) => {
+  // const data = useSelector<IRootState>((state) = > state.countriesReducer.countries)
+
+  React.useEffect(() => {
+    fetch("https://restcountries.com/v2/all")
+      .then((res) => res.json())
+      .then((json) => {
+        console.log(json);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
+  // console.log(data)
+
   return (
     <div className="home">
       <Search />
