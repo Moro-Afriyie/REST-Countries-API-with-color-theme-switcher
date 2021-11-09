@@ -1,3 +1,4 @@
+import { countriesInterface } from "../../interfaces/interface";
 import {
   FETCH_COUNTRIES_SUCCESS,
   FETCH_COUNTRIES_ERROR,
@@ -5,7 +6,7 @@ import {
 } from "../types/countryTypes";
 
 interface countryInterface {
-  countries: any[];
+  countries: countriesInterface[];
   loading: boolean;
   error: string | null;
 }
@@ -17,13 +18,13 @@ const initialState = {
 
 type Action =
   | { type: typeof FETCH_COUNTRIES_BEGIN }
-  | { type: typeof FETCH_COUNTRIES_SUCCESS; payload: any }
-  | { type: typeof FETCH_COUNTRIES_ERROR; payload: any };
+  | { type: typeof FETCH_COUNTRIES_SUCCESS; payload: countriesInterface[] }
+  | { type: typeof FETCH_COUNTRIES_ERROR; payload: string };
 
 export const countriesReducer = (
   state: countryInterface = initialState,
   action: Action
-) => {
+): countryInterface => {
   switch (action.type) {
     case FETCH_COUNTRIES_BEGIN:
       return {

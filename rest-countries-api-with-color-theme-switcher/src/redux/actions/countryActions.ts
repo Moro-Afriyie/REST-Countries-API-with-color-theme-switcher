@@ -1,3 +1,4 @@
+import { countriesInterface } from "./../../interfaces/interface";
 import axios from "axios";
 import { Dispatch } from "redux";
 
@@ -14,14 +15,14 @@ export const fetchCountriesBegin = () => {
   };
 };
 
-export const fetchCountriesSuccess = (data: any[]) => {
+export const fetchCountriesSuccess = (data: countriesInterface) => {
   return {
     type: FETCH_COUNTRIES_SUCCESS,
     payload: data,
   };
 };
 
-export const fetchCountriesError = (error: any) => {
+export const fetchCountriesError = (error: unknown) => {
   return {
     type: FETCH_COUNTRIES_ERROR,
     error: error,

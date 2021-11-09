@@ -17,4 +17,11 @@ export interface countriesInterface {
     nativeName: string;
   }[];
   borders: string[];
+  flag: string;
+}
+
+interface countryInterface {
+  countries: countriesInterface[];
+  loading: boolean;
+  error: string | null;
 }

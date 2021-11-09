@@ -8,11 +8,6 @@ import Search from "./Search";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface IHomeProps {}
-interface countryInterface {
-  countries: any[];
-  loading: boolean;
-  error: string | null;
-}
 
 const Home: React.FunctionComponent<IHomeProps> = (props) => {
   const dispatch = useDispatch();
