@@ -5,8 +5,8 @@ import { toggleTheme } from "../redux/actions/toggleThemeActions";
 import { IRootState } from "../redux/reducers/rootReducer";
 
 const Header: React.FunctionComponent = () => {
-  const toggle = useSelector<IRootState>(
-    (state) => state.toggleTheme.toggleTheme
+  const toggle = useSelector(
+    (state: IRootState) => state.toggleTheme.toggleTheme
   );
   const dispatch = useDispatch();
 

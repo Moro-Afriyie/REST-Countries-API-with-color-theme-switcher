@@ -8,8 +8,8 @@ import { useSelector } from "react-redux";
 import { IRootState } from "./redux/reducers/rootReducer";
 
 function App() {
-  const toggle = useSelector<IRootState>(
-    (state) => state.toggleTheme.toggleTheme
+  const toggle = useSelector(
+    (state: IRootState) => state.toggleTheme.toggleTheme
   );
 
   return (
