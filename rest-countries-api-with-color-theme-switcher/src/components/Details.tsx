@@ -6,6 +6,7 @@ import { Link, useParams } from "react-router-dom";
 // import { getCountryData } from "../redux/actions/countryDetailsActions";
 import { countriesInterface } from "../interfaces/interface";
 import axios from "axios";
+import { countriesReducer } from "../redux/reducers/countryReducer";
 
 const Details: React.FunctionComponent = () => {
   const params = useParams<{ country: string }>();
@@ -27,13 +28,6 @@ const Details: React.FunctionComponent = () => {
     };
     fectchCountry();
   }, [params.country]);
-
-  const currency = (country: countriesInterface) => {
-    if (country.currencies === undefined) {
-      return "no currency specified";
-    }
-    return country.currencies.name;
-  };
 
   return (
     <div className="details">
@@ -74,7 +68,10 @@ const Details: React.FunctionComponent = () => {
                   Top Level Domain: <span>{country[0].topLevelDomain}</span>
                 </p>
                 <p>
-                  Currencies: <span>{currency(country[0])}</span>
+                  Currencies:{" "}
+                  <span>
+                    {country[0].currencies ? country[0].currencies[0].name : ""}
+                  </span>
                 </p>
                 <p>
                   Languages:{" "}
