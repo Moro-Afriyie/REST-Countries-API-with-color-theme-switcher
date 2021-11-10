@@ -30,10 +30,12 @@ const Details: React.FunctionComponent = () => {
   }, [params.country]);
 
   const getBorders = (country: countriesInterface) => {
+    // let countryIndexed = indexCodes();
     if (country.borders === undefined) {
       return [];
     }
     const op = country.borders.map((e) => {
+      //border = countryIndexed[e];
       const border = countryCode.find((element) => {
         if (element.alpha2Code === e || element.alpha3Code === e) {
           return element;
@@ -43,6 +45,16 @@ const Details: React.FunctionComponent = () => {
     });
     return op;
   };
+
+  // const indexCodes = (country: any) => {
+  //   const countryIndexed = {};
+  //   country.forEach((element) => {
+  //     countryIndexed[element.alpha2Code]= element;
+  //     countryIndexed[element.alpha3Code]= element;
+  //   });
+
+  // return countryIndexed;
+  // };
 
   return (
     <div className="details">

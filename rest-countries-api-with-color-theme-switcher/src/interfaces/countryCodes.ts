@@ -1744,3 +1744,13 @@ export const countryCode = [
     numeric: 248,
   },
 ];
+
+// {
+//   "La":{
+//     englishShortName: "United Arab Emirates (the)",
+//     frenchShortName: "Émirats arabes unis (les)",
+//     alpha2Code: "AE",
+//     alpha3Code: "ARE",
+//     numeric: 784,
+//   }
+// }

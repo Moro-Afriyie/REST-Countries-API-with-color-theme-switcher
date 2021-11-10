@@ -1,10 +1,21 @@
 import * as React from "react";
+import { useDispatch } from "react-redux";
+import { filterCountriesData } from "../redux/actions/countryActions";
 import "../styles/Search.scss";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface ISearchProps {}
 
 const Search: React.FunctionComponent<ISearchProps> = (props) => {
+  const [filterCountries, setFilterCountries] = React.useState("");
+  const dispatch = useDispatch();
+
+  const onFilterCountries = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setFilterCountries(e.target.value);
+    console.log(filterCountries);
+    dispatch(filterCountriesData(e.target.value.toLowerCase()));
+  };
+
   return (
     <div className="search__container">
       <div className="search">
@@ -17,7 +28,11 @@ const Search: React.FunctionComponent<ISearchProps> = (props) => {
       </div>
       <div className="filter">
         {/* <select onChange={selectCountry}> */}
-        <select className="mySelect">
+        <select
+          className="mySelect"
+          value={filterCountries}
+          onChange={onFilterCountries}
+        >
           <option value="default" disabled>
             Filter by region
           </option>
