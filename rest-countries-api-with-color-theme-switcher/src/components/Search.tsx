@@ -12,8 +12,7 @@ const Search: React.FunctionComponent<ISearchProps> = (props) => {
 
   const onFilterCountries = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setFilterCountries(e.target.value);
-    console.log(filterCountries);
-    dispatch(filterCountriesData(e.target.value.toLowerCase()));
+    dispatch(filterCountriesData(filterCountries));
   };
 
   return (
@@ -37,7 +36,7 @@ const Search: React.FunctionComponent<ISearchProps> = (props) => {
             Filter by region
           </option>
           <option value="Africa">Africa</option>
-          <option value="America">America</option>
+          <option value="Americas">America</option>
           <option value="Asia">Asia</option>
           <option value="Europe">Europe</option>
           <option value="Oceania">Oceania</option>
