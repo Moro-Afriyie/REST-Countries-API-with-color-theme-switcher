@@ -48,7 +48,6 @@ export const filterCountriesData = (region: string) => {
       const response = await axios.get(
         `https://restcountries.com/v2/region/${region}`
       );
-      console.log(response.data);
       dispatch(fetchCountriesSuccess(response.data));
     } catch (error) {
       dispatch(fetchCountriesError(error));

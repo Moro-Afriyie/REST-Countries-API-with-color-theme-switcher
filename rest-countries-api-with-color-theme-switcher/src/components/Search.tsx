@@ -7,12 +7,10 @@ import "../styles/Search.scss";
 interface ISearchProps {}
 
 const Search: React.FunctionComponent<ISearchProps> = (props) => {
-  const [filterCountries, setFilterCountries] = React.useState("");
   const dispatch = useDispatch();
 
   const onFilterCountries = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setFilterCountries(e.target.value);
-    dispatch(filterCountriesData(filterCountries));
+    dispatch(filterCountriesData(e.target.value));
   };
 
   return (
@@ -27,11 +25,7 @@ const Search: React.FunctionComponent<ISearchProps> = (props) => {
       </div>
       <div className="filter">
         {/* <select onChange={selectCountry}> */}
-        <select
-          className="mySelect"
-          value={filterCountries}
-          onChange={onFilterCountries}
-        >
+        <select className="mySelect" onChange={onFilterCountries}>
           <option value="default" disabled>
             Filter by region
           </option>
