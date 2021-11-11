@@ -102,9 +102,10 @@
             color: var(--textColor);
             padding: 0.3rem 0.5rem;
             border-radius: 0.1rem;
-            /*****/
-            width: 4rem;
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
           }
         }
       }

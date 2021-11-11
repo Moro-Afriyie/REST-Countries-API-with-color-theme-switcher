@@ -111,9 +111,9 @@ const Details: React.FunctionComponent = () => {
             <div className="country__info__bottom">
               <p>Border Countries:</p>
               <div className="border__countries">
-                {getBorders(country[0]).map((border) => {
+                {getBorders(country[0]).map((border, index) => {
                   return (
-                    <div className="country" key={border?.englishShortName}>
+                    <div className="country" key={index}>
                       {border?.englishShortName}
                     </div>
                   );

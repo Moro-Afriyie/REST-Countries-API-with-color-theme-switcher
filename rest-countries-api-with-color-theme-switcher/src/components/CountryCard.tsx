@@ -1,8 +1,6 @@
 import * as React from "react";
 import "../styles/CountryCard.scss";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { IRootState } from "../redux/reducers/rootReducer";
 
 interface ICountryCardProps {
   name: string;
