@@ -2,8 +2,12 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  .loader {
+    display: grid;
+    place-content: center;
+    min-height: 20rem;
+  }
   .error {
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     align-items: center;

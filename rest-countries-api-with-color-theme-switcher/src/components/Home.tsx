@@ -7,14 +7,19 @@ import "../styles/Home.scss";
 import CountryCard from "./CountryCard";
 import Search from "./Search";
 import errorPage from "../assets/errorPage.svg";
+import FadeLoader from "react-spinners/FadeLoader";
 
 const Home: React.FunctionComponent = () => {
   const dispatch = useDispatch();
   const countries = useSelector(
     (state: IRootState) => state.countries.countries
   );
-  const loading = useSelector((state: IRootState) => state.countries.loading);
+  // const loading = useSelector((state: IRootState) => state.countries.loading);
   const error = useSelector((state: IRootState) => state.countries.error);
+  const loading = true;
+  const toggle = useSelector(
+    (state: IRootState) => state.toggleTheme.toggleTheme
+  );
 
   React.useEffect(() => {
     dispatch(fetchCountriesData());
@@ -27,7 +32,9 @@ const Home: React.FunctionComponent = () => {
       <Search />
       <div className="home__cards__container">
         {loading ? (
-          "Loading..."
+          <div className="loader">
+            <FadeLoader color={toggle ? "#ffffff" : "#000000"} />
+          </div>
         ) : error ? (
           <div className="error">
             <h1>Not found</h1>
