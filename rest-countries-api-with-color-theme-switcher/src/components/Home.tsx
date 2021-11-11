@@ -14,9 +14,8 @@ const Home: React.FunctionComponent = () => {
   const countries = useSelector(
     (state: IRootState) => state.countries.countries
   );
-  // const loading = useSelector((state: IRootState) => state.countries.loading);
+  const loading = useSelector((state: IRootState) => state.countries.loading);
   const error = useSelector((state: IRootState) => state.countries.error);
-  const loading = true;
   const toggle = useSelector(
     (state: IRootState) => state.toggleTheme.toggleTheme
   );
@@ -24,8 +23,6 @@ const Home: React.FunctionComponent = () => {
   React.useEffect(() => {
     dispatch(fetchCountriesData());
   }, [dispatch]);
-
-  //{loading ? "Loading..." : error ? error.message : users.map(u => <h3>{u.name}</h3>)}
 
   return (
     <div className="home">

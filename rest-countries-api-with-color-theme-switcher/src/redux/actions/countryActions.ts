@@ -7,7 +7,7 @@ import {
   FETCH_COUNTRIES_ERROR,
   FETCH_COUNTRIES_BEGIN,
 } from "../types/countryTypes";
-const url = "https://restcountries.com/v2/allllll";
+const url = "https://restcountries.com/v2/all";
 
 export const fetchCountriesBegin = () => {
   return {
@@ -45,7 +45,7 @@ export const filterCountriesData = (region: string) => {
     try {
       dispatch(fetchCountriesBegin());
       const response = await axios.get(
-        `https://restcountries.com/v2/regions/${region}`
+        `https://restcountries.com/v2/region/${region}`
       );
       dispatch(fetchCountriesSuccess(response.data));
     } catch (error) {
