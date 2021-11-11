@@ -1,6 +1,9 @@
 import * as React from "react";
 import { useDispatch } from "react-redux";
-import { filterCountriesData,SeacrhCountry } from "../redux/actions/countryActions";
+import {
+  filterCountriesData,
+  SeacrhCountry,
+} from "../redux/actions/countryActions";
 import "../styles/Search.scss";
 
 const Search: React.FunctionComponent = () => {
@@ -10,9 +13,10 @@ const Search: React.FunctionComponent = () => {
     dispatch(filterCountriesData(e.target.value));
   };
 
-const onSearchForCountry = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onSearchForCountry = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(SeacrhCountry(e.target.value));
   };
+
   return (
     <div className="search__container">
       <div className="search">

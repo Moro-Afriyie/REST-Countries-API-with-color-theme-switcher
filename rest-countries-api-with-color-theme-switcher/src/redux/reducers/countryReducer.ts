@@ -37,6 +37,7 @@ export const countriesReducer = (
         ...state,
         loading: false,
         countries: action.payload,
+        error: false,
       };
 
     case FETCH_COUNTRIES_ERROR:

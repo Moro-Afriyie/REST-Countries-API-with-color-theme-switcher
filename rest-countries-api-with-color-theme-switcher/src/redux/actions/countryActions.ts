@@ -47,6 +47,7 @@ export const filterCountriesData = (region: string) => {
       const response = await axios.get(
         `https://restcountries.com/v2/region/${region}`
       );
+
       dispatch(fetchCountriesSuccess(response.data));
     } catch (error) {
       dispatch(fetchCountriesError());
@@ -55,13 +56,22 @@ export const filterCountriesData = (region: string) => {
 };
 
 export const SeacrhCountry = (name: string) => {
+  let url = `https://restcountries.com/v2/name/${name}`;
+
+  //checks if the search name is empty and use the all countries url
+  if (name === "") {
+    url = `https://restcountries.com/v2/all`;
+  }
   return async (dispatch: Dispatch) => {
     try {
       dispatch(fetchCountriesBegin());
-      const response = await axios.get(
-        `https://restcountries.com/v2/name/${name}`
-      );
-      dispatch(fetchCountriesSuccess(response.data));
+      const response = await axios.get(url);
+      console.log("response: ", response.data);
+      if (response.data.status === 404) {
+        dispatch(fetchCountriesError());
+      } else {
+        dispatch(fetchCountriesSuccess(response.data));
+      }
     } catch (error) {
       dispatch(fetchCountriesError());
     }
