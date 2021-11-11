@@ -1,6 +1,8 @@
 import * as React from "react";
 import "../styles/CountryCard.scss";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { IRootState } from "../redux/reducers/rootReducer";
 
 interface ICountryCardProps {
   name: string;
@@ -17,9 +19,13 @@ const CountryCard: React.FunctionComponent<ICountryCardProps> = ({
   capital,
   flag,
 }: ICountryCardProps) => {
+  const countries = useSelector(
+    (state: IRootState) => state.countries.countries
+  );
+
   return (
     <Link to={`/${name}`}>
-      <div className="card-container">
+      <div className="card-container ">
         <div className="card__image">
           <img src={flag.png} alt="country flag" />
         </div>
