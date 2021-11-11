@@ -27,6 +27,7 @@
     outline: none;
     padding: 0.32rem;
     font-family: "Nunito Sans", sans-serif;
+    font-size: 0.8rem;
     background-color: var(--element);
     color: var(--inputText);
     &:focus {
@@ -48,7 +49,7 @@ select.mySelect {
   font-weight: 600;
   outline: none;
   border: none;
-
+  font-size: 0.8rem;
   box-shadow: $boxShadow;
 
   border-radius: 0.2rem;
