@@ -3,10 +3,7 @@ import { useDispatch } from "react-redux";
 import { filterCountriesData } from "../redux/actions/countryActions";
 import "../styles/Search.scss";
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface ISearchProps {}
-
-const Search: React.FunctionComponent<ISearchProps> = (props) => {
+const Search: React.FunctionComponent = () => {
   const dispatch = useDispatch();
 
   const onFilterCountries = (e: React.ChangeEvent<HTMLSelectElement>) => {
