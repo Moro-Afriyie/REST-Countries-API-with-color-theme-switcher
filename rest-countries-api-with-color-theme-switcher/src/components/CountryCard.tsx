@@ -19,10 +19,6 @@ const CountryCard: React.FunctionComponent<ICountryCardProps> = ({
   capital,
   flag,
 }: ICountryCardProps) => {
-  const countries = useSelector(
-    (state: IRootState) => state.countries.countries
-  );
-
   return (
     <Link to={`/${name}`}>
       <div className="card-container ">
