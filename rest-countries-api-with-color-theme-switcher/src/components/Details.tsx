@@ -1,18 +1,12 @@
 import * as React from "react";
 import "../styles/Details.scss";
 import { Link, useParams } from "react-router-dom";
-// import { useDispatch, useSelector } from "react-redux";
-// import { IRootState } from "../redux/reducers/rootReducer";
-// import { getCountryData } from "../redux/actions/countryDetailsActions";
 import { countriesInterface } from "../interfaces/interface";
 import { countryCode } from "../interfaces/countryCodes";
 import axios from "axios";
 
 const Details: React.FunctionComponent = () => {
   const params = useParams<{ country: string }>();
-  // const dispatch = useDispatch();
-  // const country = useSelector((state: IRootState) => state.setCountry.country);
-  // const loading = useSelector((state: IRootState) => state.setCountry.loading);
   const [country, setCountry] = React.useState<countriesInterface[]>([]);
 
   React.useEffect(() => {
