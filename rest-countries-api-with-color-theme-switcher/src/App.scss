@@ -28,3 +28,9 @@ body {
     font-size: 13px;
   }
 }
+
+@media screen and (min-width: 2000px) {
+  html {
+    font-size: 25px;
+  }
+}
