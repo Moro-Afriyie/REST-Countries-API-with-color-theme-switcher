@@ -53,3 +53,17 @@ export const filterCountriesData = (region: string) => {
     }
   };
 };
+
+export const SeacrhCountry = (name: string) => {
+  return async (dispatch: Dispatch) => {
+    try {
+      dispatch(fetchCountriesBegin());
+      const response = await axios.get(
+        `https://restcountries.com/v2/name/${name}`
+      );
+      dispatch(fetchCountriesSuccess(response.data));
+    } catch (error) {
+      dispatch(fetchCountriesError());
+    }
+  };
+};
