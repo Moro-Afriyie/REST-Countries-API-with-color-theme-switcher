@@ -6,7 +6,7 @@ import { IRootState } from "../redux/reducers/rootReducer";
 import "../styles/Home.scss";
 import CountryCard from "./CountryCard";
 import Search from "./Search";
-import errorPage from "../assets/erroPage.svg";
+import errorPage from "../assets/errorPage.svg";
 
 const Home: React.FunctionComponent = () => {
   const dispatch = useDispatch();
@@ -14,7 +14,7 @@ const Home: React.FunctionComponent = () => {
     (state: IRootState) => state.countries.countries
   );
   const loading = useSelector((state: IRootState) => state.countries.loading);
-  const error = useSelector((state: IRootState) => state.countries.loading);
+  const error = useSelector((state: IRootState) => state.countries.error);
 
   React.useEffect(() => {
     dispatch(fetchCountriesData());
@@ -29,7 +29,10 @@ const Home: React.FunctionComponent = () => {
         {loading ? (
           "Loading..."
         ) : error ? (
-          <img src={errorPage} alt="error page" />
+          <div className="error">
+            <h1>Not found</h1>
+            <img src={errorPage} alt="error page" />
+          </div>
         ) : (
           countries.map((country: countriesInterface) => {
             return (

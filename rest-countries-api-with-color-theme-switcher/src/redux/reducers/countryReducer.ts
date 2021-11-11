@@ -19,7 +19,7 @@ const initialState = {
 type Action =
   | { type: typeof FETCH_COUNTRIES_BEGIN }
   | { type: typeof FETCH_COUNTRIES_SUCCESS; payload: countriesInterface[] }
-  | { type: typeof FETCH_COUNTRIES_ERROR; payload: boolean };
+  | { type: typeof FETCH_COUNTRIES_ERROR };
 
 export const countriesReducer = (
   state: countryInterface = initialState,
@@ -30,7 +30,6 @@ export const countriesReducer = (
       return {
         ...state,
         loading: true,
-        error: false,
       };
 
     case FETCH_COUNTRIES_SUCCESS:
@@ -44,7 +43,7 @@ export const countriesReducer = (
       return {
         ...state,
         loading: false,
-        error: action.payload,
+        error: true,
         countries: [],
       };
 

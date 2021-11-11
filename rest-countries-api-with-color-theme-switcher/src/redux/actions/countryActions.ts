@@ -7,7 +7,7 @@ import {
   FETCH_COUNTRIES_ERROR,
   FETCH_COUNTRIES_BEGIN,
 } from "../types/countryTypes";
-const url = "https://restcountries.com/v2/all";
+const url = "https://restcountries.com/v2/allllll";
 
 export const fetchCountriesBegin = () => {
   return {
@@ -22,10 +22,9 @@ export const fetchCountriesSuccess = (data: countriesInterface) => {
   };
 };
 
-export const fetchCountriesError = (error: boolean) => {
+export const fetchCountriesError = () => {
   return {
     type: FETCH_COUNTRIES_ERROR,
-    error: error,
   };
 };
 
@@ -36,7 +35,7 @@ export const fetchCountriesData = () => {
       const response = await axios.get(url);
       dispatch(fetchCountriesSuccess(response.data));
     } catch (error) {
-      dispatch(fetchCountriesError(true));
+      dispatch(fetchCountriesError());
     }
   };
 };
@@ -46,11 +45,11 @@ export const filterCountriesData = (region: string) => {
     try {
       dispatch(fetchCountriesBegin());
       const response = await axios.get(
-        `https://restcountries.com/v2/region/${region}`
+        `https://restcountries.com/v2/regions/${region}`
       );
       dispatch(fetchCountriesSuccess(response.data));
     } catch (error) {
-      dispatch(fetchCountriesError(true));
+      dispatch(fetchCountriesError());
     }
   };
 };
