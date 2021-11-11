@@ -23,7 +23,7 @@ const Search: React.FunctionComponent = () => {
         <i className="fas fa-search"></i>
         <input
           placeholder="Search for a country..."
-          type="text"
+          type="search"
           name="search"
           onChange={onSearchForCountry}
         />
@@ -31,9 +31,7 @@ const Search: React.FunctionComponent = () => {
       <div className="filter">
         {/* <select onChange={selectCountry}> */}
         <select className="mySelect" onChange={onFilterCountries}>
-          <option value="default" disabled>
-            Filter by region
-          </option>
+          <option value="default">Filter by region</option>
           <option value="Africa">Africa</option>
           <option value="Americas">America</option>
           <option value="Asia">Asia</option>

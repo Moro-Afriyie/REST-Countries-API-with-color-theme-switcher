@@ -41,12 +41,16 @@ export const fetchCountriesData = () => {
 };
 
 export const filterCountriesData = (region: string) => {
+  let url = `https://restcountries.com/v2/region/${region}`;
+
+  //checks if the search name is empty and use the all countries url
+  if (region === "default") {
+    url = `https://restcountries.com/v2/all`;
+  }
   return async (dispatch: Dispatch) => {
     try {
       dispatch(fetchCountriesBegin());
-      const response = await axios.get(
-        `https://restcountries.com/v2/region/${region}`
-      );
+      const response = await axios.get(url);
 
       dispatch(fetchCountriesSuccess(response.data));
     } catch (error) {
