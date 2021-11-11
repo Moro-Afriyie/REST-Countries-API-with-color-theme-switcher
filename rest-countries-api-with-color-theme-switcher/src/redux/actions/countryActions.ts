@@ -22,7 +22,7 @@ export const fetchCountriesSuccess = (data: countriesInterface) => {
   };
 };
 
-export const fetchCountriesError = (error: unknown) => {
+export const fetchCountriesError = (error: boolean) => {
   return {
     type: FETCH_COUNTRIES_ERROR,
     error: error,
@@ -36,7 +36,7 @@ export const fetchCountriesData = () => {
       const response = await axios.get(url);
       dispatch(fetchCountriesSuccess(response.data));
     } catch (error) {
-      dispatch(fetchCountriesError(error));
+      dispatch(fetchCountriesError(true));
     }
   };
 };
@@ -50,7 +50,7 @@ export const filterCountriesData = (region: string) => {
       );
       dispatch(fetchCountriesSuccess(response.data));
     } catch (error) {
-      dispatch(fetchCountriesError(error));
+      dispatch(fetchCountriesError(true));
     }
   };
 };

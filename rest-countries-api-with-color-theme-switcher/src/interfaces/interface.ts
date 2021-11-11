@@ -24,5 +24,5 @@ export interface countriesInterface {
 export interface countryInterface {
   countries: countriesInterface[];
   loading: boolean;
-  error: string | null;
+  error: boolean;
 }

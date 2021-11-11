@@ -6,12 +6,15 @@ import { IRootState } from "../redux/reducers/rootReducer";
 import "../styles/Home.scss";
 import CountryCard from "./CountryCard";
 import Search from "./Search";
+import errorPage from "../assets/erroPage.svg";
 
 const Home: React.FunctionComponent = () => {
   const dispatch = useDispatch();
   const countries = useSelector(
     (state: IRootState) => state.countries.countries
   );
+  const loading = useSelector((state: IRootState) => state.countries.loading);
+  const error = useSelector((state: IRootState) => state.countries.loading);
 
   React.useEffect(() => {
     dispatch(fetchCountriesData());
@@ -23,18 +26,24 @@ const Home: React.FunctionComponent = () => {
     <div className="home">
       <Search />
       <div className="home__cards__container">
-        {countries.map((country: countriesInterface) => {
-          return (
-            <CountryCard
-              name={country.name}
-              key={country.name}
-              population={country.population}
-              region={country.region}
-              capital={country.capital}
-              flag={country.flags}
-            />
-          );
-        })}
+        {loading ? (
+          "Loading..."
+        ) : error ? (
+          <img src={errorPage} alt="error page" />
+        ) : (
+          countries.map((country: countriesInterface) => {
+            return (
+              <CountryCard
+                name={country.name}
+                key={country.name}
+                population={country.population}
+                region={country.region}
+                capital={country.capital}
+                flag={country.flags}
+              />
+            );
+          })
+        )}
       </div>
     </div>
   );

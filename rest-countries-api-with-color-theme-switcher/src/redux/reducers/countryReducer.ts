@@ -8,18 +8,18 @@ import {
 interface countryInterface {
   countries: countriesInterface[];
   loading: boolean;
-  error: string | null;
+  error: boolean;
 }
 const initialState = {
   countries: [],
   loading: false,
-  error: null,
+  error: false,
 };
 
 type Action =
   | { type: typeof FETCH_COUNTRIES_BEGIN }
   | { type: typeof FETCH_COUNTRIES_SUCCESS; payload: countriesInterface[] }
-  | { type: typeof FETCH_COUNTRIES_ERROR; payload: string };
+  | { type: typeof FETCH_COUNTRIES_ERROR; payload: boolean };
 
 export const countriesReducer = (
   state: countryInterface = initialState,
@@ -30,7 +30,7 @@ export const countriesReducer = (
       return {
         ...state,
         loading: true,
-        error: null,
+        error: false,
       };
 
     case FETCH_COUNTRIES_SUCCESS:
