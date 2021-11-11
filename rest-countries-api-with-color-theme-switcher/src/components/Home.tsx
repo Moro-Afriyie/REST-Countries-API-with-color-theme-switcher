@@ -15,7 +15,7 @@ const Home: React.FunctionComponent = () => {
 
   React.useEffect(() => {
     dispatch(fetchCountriesData());
-  }, []);
+  }, [dispatch]);
 
   //{loading ? "Loading..." : error ? error.message : users.map(u => <h3>{u.name}</h3>)}
 
