@@ -7,7 +7,7 @@ interface ICountryCardProps {
   population: number;
   region: string;
   capital: string;
-  flag: { png: string };
+  flag: { svg: string };
 }
 
 const CountryCard: React.FunctionComponent<ICountryCardProps> = ({
@@ -20,9 +20,10 @@ const CountryCard: React.FunctionComponent<ICountryCardProps> = ({
   return (
     <Link to={`/${name}`}>
       <div className="card-container ">
-        <div className="card__image">
-          <img src={flag.png} alt="country flag" />
-        </div>
+        <div
+          className="card__image"
+          style={{ backgroundImage: `url(${flag.svg})` }}
+        ></div>
         <div className="card__info">
           <h5>{name}</h5>
           <p>

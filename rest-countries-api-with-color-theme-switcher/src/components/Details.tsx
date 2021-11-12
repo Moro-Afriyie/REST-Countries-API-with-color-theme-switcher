@@ -61,7 +61,7 @@ const Details: React.FunctionComponent = () => {
       {country.length > 0 && (
         <div className="details__container">
           <div className="country__flag">
-            <img src={country[0].flags.png} alt="country flag" />
+            <img src={country[0].flags.svg} alt="country flag" />
           </div>
           <div className="country__details">
             <h2 className="country__name">{country[0].name}</h2>
