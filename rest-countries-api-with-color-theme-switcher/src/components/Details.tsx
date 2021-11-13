@@ -108,8 +108,12 @@ const Details: React.FunctionComponent = () => {
               <div className="border__countries">
                 {getBorders(country[0]).map((border, index) => {
                   return (
-                    <Link to={`/${border?.englishShortName}`} key={index}>
-                      <div className="country">{border?.englishShortName}</div>
+                    <Link
+                      to={`/${border?.englishShortName}`}
+                      key={index}
+                      className="country"
+                    >
+                      {border?.englishShortName}
                     </Link>
                   );
                 })}
