@@ -104,12 +104,13 @@ const Details: React.FunctionComponent = () => {
             </div>
             <div className="country__info__bottom">
               <p>Border Countries:</p>
+
               <div className="border__countries">
                 {getBorders(country[0]).map((border, index) => {
                   return (
-                    <div className="country" key={index}>
-                      {border?.englishShortName}
-                    </div>
+                    <Link to={`/${border?.englishShortName}`} key={index}>
+                      <div className="country">{border?.englishShortName}</div>
+                    </Link>
                   );
                 })}
               </div>
