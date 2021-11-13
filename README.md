@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Screenshot
 
-![]()
-![]()
+![](./screenshots/dark-mode.png)
+![](./screenshots/light-mode.png)
 
 ### Links
 
