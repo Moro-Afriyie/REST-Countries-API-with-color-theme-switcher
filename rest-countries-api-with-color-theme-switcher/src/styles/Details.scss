@@ -71,7 +71,6 @@
       }
       .country__info {
         display: flex;
-        // gap: 5rem;
         justify-content: space-between;
         @media screen and(max-width:500px) {
           flex-direction: column;
