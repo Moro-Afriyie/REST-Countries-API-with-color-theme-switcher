@@ -819,14 +819,14 @@ export const countryCode = [
     numeric: 296,
   },
   {
-    englishShortName: "Korea (the Democratic People's Republic of)",
+    englishShortName: "Korea (Democratic People's Republic of)",
     frenchShortName: "Corée (la République populaire démocratique de)",
     alpha2Code: "KP",
     alpha3Code: "PRK",
     numeric: 408,
   },
   {
-    englishShortName: "Korea (the Republic of)",
+    englishShortName: "Korea (Republic of)",
     frenchShortName: "Corée (la République de)",
     alpha2Code: "KR",
     alpha3Code: "KOR",
