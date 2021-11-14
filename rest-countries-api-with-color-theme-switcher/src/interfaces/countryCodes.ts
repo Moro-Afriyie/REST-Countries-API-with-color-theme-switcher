@@ -1526,7 +1526,7 @@ export const countryCode = [
     numeric: 762,
   },
   {
-    englishShortName: "Tanzania, the United Republic of",
+    englishShortName: "Tanzania",
     frenchShortName: "Tanzanie (la République-Unie de)",
     alpha2Code: "TZ",
     alpha3Code: "TZA",
@@ -1708,8 +1708,8 @@ export const countryCode = [
     numeric: 876,
   },
   {
-    englishShortName: "Western Sahara*",
-    frenchShortName: "Sahara occidental (le)*",
+    englishShortName: "Western Sahara",
+    frenchShortName: "Sahara occidental (le)",
     alpha2Code: "EH",
     alpha3Code: "ESH",
     numeric: 732,
@@ -1743,13 +1743,3 @@ export const countryCode = [
     numeric: 248,
   },
 ];
-
-// {
-//   "La":{
-//     englishShortName: "United Arab Emirates",
-//     frenchShortName: "Émirats arabes unis (les)",
-//     alpha2Code: "AE",
-//     alpha3Code: "ARE",
-//     numeric: 784,
-//   }
-// }
