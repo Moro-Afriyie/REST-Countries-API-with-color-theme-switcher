@@ -105,7 +105,7 @@ export const countryCode = [
     numeric: 31,
   },
   {
-    englishShortName: "Bahamas (the)",
+    englishShortName: "Bahamas",
     frenchShortName: "Bahamas (les)",
     alpha2Code: "BS",
     alpha3Code: "BHS",
@@ -175,7 +175,7 @@ export const countryCode = [
     numeric: 64,
   },
   {
-    englishShortName: "Bolivia (Plurinational State of)",
+    englishShortName: "Bolivia",
     frenchShortName: "Bolivie (État plurinational de)",
     alpha2Code: "BO",
     alpha3Code: "BOL",
@@ -217,7 +217,7 @@ export const countryCode = [
     numeric: 76,
   },
   {
-    englishShortName: "British Indian Ocean Territory (the)",
+    englishShortName: "British Indian Ocean Territory",
     frenchShortName: "Indien (le Territoire britannique de l'océan)",
     alpha2Code: "IO",
     alpha3Code: "IOT",
@@ -280,14 +280,14 @@ export const countryCode = [
     numeric: 124,
   },
   {
-    englishShortName: "Cayman Islands (the)",
+    englishShortName: "Cayman Islands",
     frenchShortName: "Caïmans (les Îles)",
     alpha2Code: "KY",
     alpha3Code: "CYM",
     numeric: 136,
   },
   {
-    englishShortName: "Central African Republic (the)",
+    englishShortName: "Central African Republic",
     frenchShortName: "République centrafricaine (la)",
     alpha2Code: "CF",
     alpha3Code: "CAF",
@@ -322,7 +322,7 @@ export const countryCode = [
     numeric: 162,
   },
   {
-    englishShortName: "Cocos (Keeling) Islands (the)",
+    englishShortName: "Cocos (Keeling) Islands",
     frenchShortName: "Cocos (les Îles)/ Keeling (les Îles)",
     alpha2Code: "CC",
     alpha3Code: "CCK",
@@ -336,28 +336,28 @@ export const countryCode = [
     numeric: 170,
   },
   {
-    englishShortName: "Comoros (the)",
+    englishShortName: "Comoros",
     frenchShortName: "Comores (les)",
     alpha2Code: "KM",
     alpha3Code: "COM",
     numeric: 174,
   },
   {
-    englishShortName: "Congo (the Democratic Republic of the)",
+    englishShortName: "DR Congo",
     frenchShortName: "Congo (la République démocratique du)",
     alpha2Code: "CD",
     alpha3Code: "COD",
     numeric: 180,
   },
   {
-    englishShortName: "Congo (the)",
+    englishShortName: "Congo",
     frenchShortName: "Congo (le)",
     alpha2Code: "CG",
     alpha3Code: "COG",
     numeric: 178,
   },
   {
-    englishShortName: "Cook Islands (the)",
+    englishShortName: "Cook Islands",
     frenchShortName: "Cook (les Îles)",
     alpha2Code: "CK",
     alpha3Code: "COK",
@@ -434,7 +434,7 @@ export const countryCode = [
     numeric: 212,
   },
   {
-    englishShortName: "Dominican Republic (the)",
+    englishShortName: "Dominican Republic",
     frenchShortName: "dominicaine (la République)",
     alpha2Code: "DO",
     alpha3Code: "DOM",
@@ -497,14 +497,14 @@ export const countryCode = [
     numeric: 231,
   },
   {
-    englishShortName: "Falkland Islands (the) [Malvinas]",
+    englishShortName: "Falkland Islands",
     frenchShortName: "Falkland (les Îles)/Malouines (les Îles)",
     alpha2Code: "FK",
     alpha3Code: "FLK",
     numeric: 238,
   },
   {
-    englishShortName: "Faroe Islands (the)",
+    englishShortName: "Faroe Islands",
     frenchShortName: "Féroé (les Îles)",
     alpha2Code: "FO",
     alpha3Code: "FRO",
@@ -546,7 +546,7 @@ export const countryCode = [
     numeric: 258,
   },
   {
-    englishShortName: "French Southern Territories (the)",
+    englishShortName: "French Southern Territories",
     frenchShortName: "Terres australes françaises (les)",
     alpha2Code: "TF",
     alpha3Code: "ATF",
@@ -560,7 +560,7 @@ export const countryCode = [
     numeric: 266,
   },
   {
-    englishShortName: "Gambia (the)",
+    englishShortName: "Gambia",
     frenchShortName: "Gambie (la)",
     alpha2Code: "GM",
     alpha3Code: "GMB",
@@ -679,7 +679,7 @@ export const countryCode = [
     numeric: 334,
   },
   {
-    englishShortName: "Holy See (the)",
+    englishShortName: "Holy See",
     frenchShortName: "Saint-Siège (le)",
     alpha2Code: "VA",
     alpha3Code: "VAT",
@@ -847,7 +847,7 @@ export const countryCode = [
     numeric: 417,
   },
   {
-    englishShortName: "Lao People's Democratic Republic (the)",
+    englishShortName: "Lao People's Democratic Republic",
     frenchShortName: "Lao (la République démocratique populaire)",
     alpha2Code: "LA",
     alpha3Code: "LAO",
@@ -959,7 +959,7 @@ export const countryCode = [
     numeric: 470,
   },
   {
-    englishShortName: "Marshall Islands (the)",
+    englishShortName: "Marshall Islands",
     frenchShortName: "Marshall (les Îles)",
     alpha2Code: "MH",
     alpha3Code: "MHL",
@@ -1008,7 +1008,7 @@ export const countryCode = [
     numeric: 583,
   },
   {
-    englishShortName: "Moldova (the Republic of)",
+    englishShortName: "Moldova",
     frenchShortName: "Moldova (la République de)",
     alpha2Code: "MD",
     alpha3Code: "MDA",
@@ -1085,7 +1085,7 @@ export const countryCode = [
     numeric: 524,
   },
   {
-    englishShortName: "Netherlands (the)",
+    englishShortName: "Netherlands",
     frenchShortName: "Pays-Bas (les)",
     alpha2Code: "NL",
     alpha3Code: "NLD",
@@ -1113,7 +1113,7 @@ export const countryCode = [
     numeric: 558,
   },
   {
-    englishShortName: "Niger (the)",
+    englishShortName: "Niger",
     frenchShortName: "Niger (le)",
     alpha2Code: "NE",
     alpha3Code: "NER",
@@ -1148,7 +1148,7 @@ export const countryCode = [
     numeric: 807,
   },
   {
-    englishShortName: "Northern Mariana Islands (the)",
+    englishShortName: "Northern Mariana Islands",
     frenchShortName: "Mariannes du Nord (les Îles)",
     alpha2Code: "MP",
     alpha3Code: "MNP",
@@ -1218,7 +1218,7 @@ export const countryCode = [
     numeric: 604,
   },
   {
-    englishShortName: "Philippines (the)",
+    englishShortName: "Philippines",
     frenchShortName: "Philippines (les)",
     alpha2Code: "PH",
     alpha3Code: "PHL",
@@ -1267,7 +1267,7 @@ export const countryCode = [
     numeric: 642,
   },
   {
-    englishShortName: "Russian Federation (the)",
+    englishShortName: "Russian Federation",
     frenchShortName: "Russie (la Fédération de)",
     alpha2Code: "RU",
     alpha3Code: "RUS",
@@ -1470,7 +1470,7 @@ export const countryCode = [
     numeric: 144,
   },
   {
-    englishShortName: "Sudan (the)",
+    englishShortName: "Sudan",
     frenchShortName: "Soudan (le)",
     alpha2Code: "SD",
     alpha3Code: "SDN",
@@ -1505,7 +1505,7 @@ export const countryCode = [
     numeric: 756,
   },
   {
-    englishShortName: "Syrian Arab Republic (the)",
+    englishShortName: "Syrian Arab Republic",
     frenchShortName: "République arabe syrienne (la)",
     alpha2Code: "SY",
     alpha3Code: "SYR",
@@ -1596,7 +1596,7 @@ export const countryCode = [
     numeric: 795,
   },
   {
-    englishShortName: "Turks and Caicos Islands (the)",
+    englishShortName: "Turks and Caicos Islands",
     frenchShortName: "Turks-et-Caïcos (les Îles)",
     alpha2Code: "TC",
     alpha3Code: "TCA",
@@ -1624,29 +1624,28 @@ export const countryCode = [
     numeric: 804,
   },
   {
-    englishShortName: "United Arab Emirates (the)",
+    englishShortName: "United Arab Emirates",
     frenchShortName: "Émirats arabes unis (les)",
     alpha2Code: "AE",
     alpha3Code: "ARE",
     numeric: 784,
   },
   {
-    englishShortName:
-      "United Kingdom of Great Britain and Northern Ireland (the)",
+    englishShortName: "United Kingdom of Great Britain and Northern Ireland",
     frenchShortName: "Royaume-Uni de Grande-Bretagne et d'Irlande du Nord (le)",
     alpha2Code: "GB",
     alpha3Code: "GBR",
     numeric: 826,
   },
   {
-    englishShortName: "United States Minor Outlying Islands (the)",
+    englishShortName: "United States Minor Outlying Islands",
     frenchShortName: "Îles mineures éloignées des États-Unis (les)",
     alpha2Code: "UM",
     alpha3Code: "UMI",
     numeric: 581,
   },
   {
-    englishShortName: "United States of America (the)",
+    englishShortName: "United States of America",
     frenchShortName: "États-Unis d'Amérique (les)",
     alpha2Code: "US",
     alpha3Code: "USA",
@@ -1747,7 +1746,7 @@ export const countryCode = [
 
 // {
 //   "La":{
-//     englishShortName: "United Arab Emirates (the)",
+//     englishShortName: "United Arab Emirates",
 //     frenchShortName: "Émirats arabes unis (les)",
 //     alpha2Code: "AE",
 //     alpha3Code: "ARE",
