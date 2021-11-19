@@ -23,14 +23,20 @@ body {
     }
   }
 }
-@media screen and (max-width: 400px) {
+@media (min-width: 2000px) {
   html {
-    font-size: 14px;
+    font-size: 30px;
   }
 }
 
-@media screen and (min-width: 2000px) {
+@media (min-width: 1400px) and (max-width: 1999px) {
   html {
-    font-size: 25px;
+    font-size: 23px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 14px;
   }
 }
