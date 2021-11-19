@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [ ]()
+- Solution URL: [ https://www.frontendmentor.io/solutions/rest-countries-api-using-react-typescript-and-redux-Bi1mhQNam](https://www.frontendmentor.io/solutions/rest-countries-api-using-react-typescript-and-redux-Bi1mhQNam)
 - Live Site URL: [https://rest-countries-api-project-5aabb1.netlify.app/](https://rest-countries-api-project-5aabb1.netlify.app/)
 
 ## My process
